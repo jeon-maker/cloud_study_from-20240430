@@ -1,0 +1,56 @@
+cloud 9을 이용하여 cloud formation 실습
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/4bc95042-3895-4ef0-85b5-98b023fd7859/Untitled.png)
+
+cloud9을 사용하여 cloudformation 템플릿을 수정하고,  템플릿을 통해 cloudformation 스택을 생성합니다.
+
+파라미터를 통해 스택을 생성 또는 업데이트할 때 템플릿에 사용자 지정 값을 입력할 수 있음.
+
+파라미터 선언
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/daec40d8-bdf9-4733-8e5b-854172347f80/Untitled.png)
+
+- 주의사항 : 여러 리소스를 명시할 경우,  바로 아래와 같은 나열 형태가 아닌
+- ”  - “ 로 분류를 해줘야 함
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/473704f0-7d99-4efa-ae16-51e684b86691/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/dd103703-8c29-4d62-91e0-56aadfb47770/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/2f877703-99db-46c0-88ae-d4906e7e35c8/Untitled.png)
+
+cli 를 통해 cloudformation로 인프라 프로비저닝 완료.
+
+콘솔에서 확인해보자\
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/824dec5e-f24f-4d79-a325-7beaf8c1c504/Untitled.png)
+
+### 
+
+## CloudFormation 스택의 드리프트 탐지
+
+방금 만든 stack의 Security Group을 수정하여 드리프트 보고서에서 식별이 되는지를 확인해보자
+
+console에서 stack의 보안그룹을 수정한 뒤 stack의 detect drift 기능을 수행함 ⇒ view drift results 확인
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/42f3558c-2147-49e3-b539-b874c955f5b2/Untitled.png)
+
+변경 내용을 자세히 보려면 view drift details
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/0c8949f4-3624-4514-8c65-9af301bdd4bb/Untitled.png)
+
+위처럼 콘솔에서도 확인할 수 있고 아래와 같이 cli 상에서도 확인이 가능하다
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/31de8278-a518-4168-89f3-b9232a2c8792/Untitled.png)
+
+---
+
+이번에는 콘솔상에서의 수정이 아닌 cli 위에서의 수정!
+
+cli에서 수정을 하고 
+
+aws cloudformation create-change-set --stack-name Lab1 --change-set-name Lab1ChangeSet --parameters ParameterKey=InstanceType,ParameterValue=t2.micro --template-body file://lab1-CS.yaml
+
+와 같은 명령어를 수행하더라도 , 즉시 변경되는 것이 아니라 콘솔에서 최종적으로 변경을 수행해줘야 한다
+
+---
