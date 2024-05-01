@@ -1,10 +1,10 @@
-실습 목표 :
+![image](https://github.com/jeon-maker/cloud_study_from-20240430/assets/77326600/a29ba12f-fce5-4735-9e63-be609f6cf932)실습 목표 :
 
 이 실습에서는 실습 템플릿을 통해 이미 구성된 **2**개의 Amazon Elastic Compute Cloud(Amazon EC2) 인스턴스에 샘플 서비스 애플리케이션을 배포합니다. AWS CodeDeploy를 사용하여 소프트웨어를 Amazon EC2 인스턴스 플릿에 푸시하고 소프트웨어가 자동으로 배포, 등록, 시작되도록 합니다.
 
 실행중인 EC2에 CodeDeploy 에이전트가 설치되어 실행 중인지 확인하기
 
-https://www.notion.so/CodeDeploy-application-9b03f40f2ed849879fc1a840c3cfa8e3?pvs=4#0c8021f45b634732b9acd9b91fb2cb6b
+![image](https://github.com/jeon-maker/cloud_study_from-20240430/assets/77326600/24d69c0f-696f-4ffd-b9e0-37b47715a4cf)
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/4e227a88-360f-4ba0-bb52-6b05a9a9c446/Untitled.png)
 
