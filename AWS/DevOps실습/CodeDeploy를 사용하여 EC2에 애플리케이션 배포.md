@@ -4,7 +4,7 @@
 
 실행중인 EC2에 CodeDeploy 에이전트가 설치되어 실행 중인지 확인하기
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/1576f232-4533-4270-a12d-ea24ccf2df7c/Untitled.png)
+https://www.notion.so/CodeDeploy-application-9b03f40f2ed849879fc1a840c3cfa8e3?pvs=4#0c8021f45b634732b9acd9b91fb2cb6b
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0af99f2e-8fd6-4b1d-b06a-d80ab9501941/4e227a88-360f-4ba0-bb52-6b05a9a9c446/Untitled.png)
 
