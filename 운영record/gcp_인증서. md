@@ -1,0 +1,5 @@
+### GCP 인증서 교체 주의사항
+
+**Global 인증서는 콘솔에서 create ssl certificate 를 바로 사용하면 가능하지만,**
+
+regional 인증서는 위 방법으로 바로 만들 수 없고 교체하려는 인증서를 사용할 LB를 선택하여 LB edit → 구성에서 인증서를 찾아서 create 를 해야 regional이 생성됨
